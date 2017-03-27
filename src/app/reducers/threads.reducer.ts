@@ -149,3 +149,10 @@ export const getUnreadMessagesCount = createSelector(
       return unreadCount;
     },
     0));
+
+// This selector emits the current thread
+export const getCurrentThread = createSelector(
+  getThreadsEntities,
+  getThreadsState,
+  ( entities: ThreadsEntities, state: ThreadsState ) =>
+    entities[state.currentThreadId] );
