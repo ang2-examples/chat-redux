@@ -13,6 +13,7 @@ import {
   ThreadsReducer
 } from './threads.reducer';
 export * from './threads.reducer';
+export * from './users.reducer';
 
 export interface AppState {
   users: UsersState

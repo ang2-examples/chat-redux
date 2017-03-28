@@ -21,6 +21,8 @@ import { ChatNavBarComponent } from './containers/chat-nav-bar/chat-nav-bar.comp
 import { ChatThreadsComponent } from './containers/chat-threads/chat-threads.component';
 import { ChatWindowComponent } from './containers/chat-window/chat-window.component';
 import { ChatThreadComponent } from './components/chat-thread/chat-thread.component';
+import { ChatMessageComponent } from './components/chat-message/chat-message.component';
+import { FromNowPipe } from './pipes/from-now.pipe';
 
 let devtools: StoreEnhancer<AppState> = window['devToolsExtension'] ? window['devToolsExtension']() : f => f;
 
@@ -40,7 +42,9 @@ export function appStoreFactory() {
     ChatNavBarComponent,
     ChatThreadsComponent,
     ChatWindowComponent,
-    ChatThreadComponent
+    ChatThreadComponent,
+    ChatMessageComponent,
+    FromNowPipe
   ],
   imports: [
     BrowserModule,
